@@ -2,6 +2,16 @@
 
 import { useEditor, EditorContent } from '@tiptap/react'//tiptap is an editor used for rich text editing
 import StarterKit from '@tiptap/starter-kit'
+import TaskItem from '@tiptap/extension-task-item'
+import TaskList from '@tiptap/extension-task-list'
+import Table from '@tiptap/extension-table'
+import TableCell from '@tiptap/extension-table-cell'
+import TableHeader from '@tiptap/extension-table-header'
+import Image from '@tiptap/extension-image'
+import TableRow from '@tiptap/extension-table-row'
+import ImageResize from 'tiptap-extension-resize-image';
+import CodeBlock from '@tiptap/extension-code-block'
+import HorizontalRule from '@tiptap/extension-horizontal-rule'
 
 export const Editor=()=>{
     const editor = useEditor({
@@ -11,7 +21,16 @@ export const Editor=()=>{
                 class:"focus:outline-none print:border-0 bg-white border border-[#C7C7C7] flex flex-col min-h-[1054px]  w-[816px] pt-10 pr-14 pb-10 cursor-text",
         },
         },
-        extensions: [StarterKit],
+        extensions: [StarterKit, TaskItem.configure({
+            nested:true,
+        }), TaskList,
+         Table.configure({
+            resizable:true,
+         })
+        , TableCell, TableHeader, TableRow, Image, ImageResize, //we can exit on triple enter
+        CodeBlock.configure({
+            exitOnTripleEnter: false,
+          }), HorizontalRule],//use ~~~ for codeblock and use --- for horizontal rule
         content: '<p>Hello World! 🌎️</p>',
       })
     
