@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📄 Google Docs Clone with Tiptap Editor
 
-## Getting Started
+This project is a web-based document editor inspired by Google Docs. It is built using the [Tiptap Editor](https://tiptap.dev/) and provides real-time collaboration, rich text editing, and document management features.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- 📝 **Rich Text Editing**: Bold, italic, underline, headings, lists, and more.
+- 👥 **Collaboration**: Real-time editing with multiple users (via WebSocket or similar).
+- 🔒 **User Authentication**: Login and manage users.
+- 📂 **Document Management**: Create, edit, save, and delete documents.
+- 📱 **Responsive Design**: Works across devices (desktop, tablet, and mobile).
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js
+- **Editor**: Tiptap Editor
+- **Styling**: Tailwind CSS, ShadCN UI Library
+- **Database**: MongoDB (or any NoSQL/SQL database of choice)
+- **Real-time Collaboration**: WebSockets (Socket.IO or similar)
+- **Authentication**: JWT or OAuth (e.g., Firebase Auth or Clerk)
+
+## 📋 Prerequisites
+
+Before you begin, ensure you have the following installed on your system:
+
+- 🚀 Node.js (v16 or higher)
+- 📦 npm or yarn
+- 🗄️ MongoDB (if using a local database)
+
+## 🚀 Installation
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/yourusername/google-docs-clone.git
+   cd google-docs-clone
+   ```
+
+2. **Install Dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Set Up Environment Variables**
+
+   Create a `.env` file in the root directory and configure the required variables:
+
+   ```env
+   PORT=3000
+   MONGO_URI=mongodb://localhost:27017/google-docs-clone
+   JWT_SECRET=your_jwt_secret
+   ```
+
+4. **Run the Application**
+
+   Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. **Access the Application**
+
+   Navigate to `http://localhost:3000` in your browser.
+
+## 🖥️ Usage
+
+1. **Sign Up/Login**: Create an account or log in.
+2. **Create a Document**: Use the "+ New Document" button to start.
+3. **Collaborate**: Share the document link with others for real-time editing.
+4. **Save Your Work**: Documents are auto-saved in the database.
+
+## 🛠️ Development
+
+### 📂 Folder Structure
+
+```plaintext
+root
+├── components      # Reusable UI components
+├── pages           # Next.js pages
+├── styles          # Global and component-specific styles
+├── utils           # Utility functions
+├── public          # Static assets
+├── server          # Backend logic (e.g., API routes, database connection)
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 📜 Commands
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Start Development Server**: `npm run dev`
+- **Build for Production**: `npm run build`
+- **Linting**: `npm run lint`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🤝 Contributing
 
-## Learn More
+Contributions are welcome! To contribute:
 
-To learn more about Next.js, take a look at the following resources:
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Push to the branch.
+5. Open a Pull Request.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📜 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-## Deploy on Vercel
+## 🙏 Acknowledgements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Tiptap Editor](https://tiptap.dev/)
+- [Next.js](https://nextjs.org/)
+- [ShadCN UI](https://shadcn.dev/)
+- [Socket.IO](https://socket.io/)
