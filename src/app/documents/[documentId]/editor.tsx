@@ -16,6 +16,7 @@ import Highlight from '@tiptap/extension-highlight'
 import Underline from '@tiptap/extension-underline'
 import FontFamily from '@tiptap/extension-font-family'
 import TextStyle from '@tiptap/extension-text-style'
+import { Color } from '@tiptap/extension-color'
 
 import { useEditorStore } from '@/store/use-editor-store'
 
@@ -53,18 +54,29 @@ export const Editor=()=>{
                 class:"focus:outline-none print:border-0 bg-white border border-[#C7C7C7] flex flex-col min-h-[1054px]  w-[816px] pt-10 pr-14 pb-10 cursor-text",
         },
         },
-        extensions: [StarterKit,FontFamily,TextStyle, TaskItem.configure({
+        extensions: [StarterKit,
+            FontFamily,
+            TextStyle,
+             TaskItem.configure({
             nested:true,
-        }), TaskList,
+        }),
+         TaskList,
          Table.configure({
             resizable:true,
          })
-        , TableCell, TableHeader, TableRow, Image, ImageResize,Underline,
+        , 
+        TableCell,
+         TableHeader,
+         TableRow,
+         Image, 
+        ImageResize,
+        Underline,
          //we can exit on triple enter
-        CodeBlock.configure({
+            CodeBlock.configure({
             exitOnTripleEnter: false,
-          }), HorizontalRule,
-          Highlight.configure({ multicolor: true })],//use ~~~ for codeblock and use --- for horizontal rule
+          })
+          , HorizontalRule
+          , Highlight.configure({ multicolor: true }),Color],//use ~~~ for codeblock and use --- for horizontal rule
         content: '<p>Hello World! 🌎️</p>',
       })
     
