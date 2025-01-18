@@ -17,13 +17,17 @@ import Underline from '@tiptap/extension-underline'
 import FontFamily from '@tiptap/extension-font-family'
 import TextStyle from '@tiptap/extension-text-style'
 import { Color } from '@tiptap/extension-color'
-
+import Link from '@tiptap/extension-link'
+import TextAlign from '@tiptap/extension-text-align'
 import { useEditorStore } from '@/store/use-editor-store'
+import { FontSizeExtension } from '@/extensions/font-size'
+import { LineHeightExtension } from '@/extensions/line-height'
 
 
 export const Editor=()=>{
     const {setEditor} = useEditorStore();
     const editor = useEditor({
+        immediatelyRender:false,
         onCreate({editor}) {
             setEditor(editor);
         },
@@ -56,9 +60,20 @@ export const Editor=()=>{
         },
         extensions: [StarterKit,
             FontFamily,
+            FontSizeExtension,
+            LineHeightExtension.configure({
+                types: [ 'heading','paragraph'],
+                defaultLineHeight: 'normal',
+            }),
             TextStyle,
              TaskItem.configure({
             nested:true,
+           
+        }),
+        Link.configure({
+            openOnClick: false,
+            autolink: true,
+            defaultProtocol: "https",
         }),
          TaskList,
          Table.configure({
@@ -68,6 +83,9 @@ export const Editor=()=>{
         TableCell,
          TableHeader,
          TableRow,
+         TextAlign.configure({
+            types: ['heading', 'paragraph'],
+          }),
          Image, 
         ImageResize,
         Underline,

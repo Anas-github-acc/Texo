@@ -273,6 +273,14 @@ body {
       -webkit-print-color-adjust: exact; /* Ensures colors are printed as specified */
       print-color-adjust: exact; /* For non-WebKit browsers */
     }
+    mark {
+      background-color: #FAF594;
+      border-radius: 0.4rem;
+      box-decoration-break: clone;
+      padding: 0.1rem 0.3rem; 
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
   }
   
   hr {
@@ -285,10 +293,22 @@ body {
       border-top: 1px solid var(--primary);
     }
   }
+
+  /*highlight styles*/
   mark {
     background-color: #FAF594;
     border-radius: 0.4rem;
     box-decoration-break: clone;
     padding: 0.1rem 0.3rem;
   }
+    /* Link styles */
+    a {
+      @apply text-blue-500;
+      cursor: pointer;
+  
+      &:hover {
+        @apply underline;
+      }
+    }
+
 }
