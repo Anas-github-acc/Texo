@@ -1,4 +1,6 @@
 import { Editor } from "./editor";
+import { Navbar } from "./navbar";
+
 import { Toolbar } from "./toolbar";
 
 interface DocumentIdProps {
@@ -11,6 +13,7 @@ const DocumentId =  async ({params}:DocumentIdProps) => {
 
     return (
         <div className="m-h-screen bg-[#FAFBFD]">
+            <Navbar/>
             <Toolbar />
             <Editor/>
         </div>
