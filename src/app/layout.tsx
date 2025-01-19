@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import {Inter} from  'next/font/google';
+import {NuqsAdapter} from "nuqs/adapters/next/app";
 
+
+const inter=Inter({
+  subsets: ["latin"],
+});
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -26,9 +32,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={inter.className}
       >
-        {children}
+        <NuqsAdapter> 
+         {children}
+         </NuqsAdapter>
       </body>
     </html>
   );
