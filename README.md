@@ -73,19 +73,6 @@ Before you begin, ensure you have the following installed on your system:
 
 ## 🛠️ Development
 
-### 📂 Folder Structure
-
-```plaintext
-root
-├── components      # Reusable UI components
-├── pages           # Next.js pages
-├── styles          # Global and component-specific styles
-├── utils           # Utility functions
-├── public          # Static assets
-├── server          # Backend logic (e.g., API routes, database connection)
-└── README.md
-```
-
 ### 📜 Commands
 
 - **Start Development Server**: `npm run dev`
