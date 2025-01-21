@@ -98,4 +98,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 - [Tiptap Editor](https://tiptap.dev/)
 - [Next.js](https://nextjs.org/)
 - [ShadCN UI](https://shadcn.dev/)
-- [Socket.IO](https://socket.io/)
+- [Liveblocks.IO](https://liveblocks.io/)
