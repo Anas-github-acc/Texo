@@ -16,6 +16,7 @@ import {
  } from "./ui/alert-dialog";
 import { api } from "../../convex/_generated/api";
 import { useState } from "react";
+import {toast} from "sonner";
 
  interface RemoveDialogProps {
     documentId:Id<"documents">;
@@ -47,7 +48,10 @@ return(
         onClick={(e)=>{
             e.stopPropagation();
             setIsDeleting(true);
-            remove({id:documentId}).finally(()=>{
+            remove({id:documentId})
+            .catch(()=>toast.error("Failed to delete document"))
+            .then(()=>toast.success("Document deleted"))
+            .finally(()=>{
                 setIsDeleting(false);
             });
         }}>
