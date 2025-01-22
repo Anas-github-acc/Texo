@@ -73,19 +73,6 @@ Before you begin, ensure you have the following installed on your system:
 
 ## 🛠️ Development
 
-### 📂 Folder Structure
-
-```plaintext
-root
-├── components      # Reusable UI components
-├── pages           # Next.js pages
-├── styles          # Global and component-specific styles
-├── utils           # Utility functions
-├── public          # Static assets
-├── server          # Backend logic (e.g., API routes, database connection)
-└── README.md
-```
-
 ### 📜 Commands
 
 - **Start Development Server**: `npm run dev`
@@ -111,4 +98,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 - [Tiptap Editor](https://tiptap.dev/)
 - [Next.js](https://nextjs.org/)
 - [ShadCN UI](https://shadcn.dev/)
-- [Socket.IO](https://socket.io/)
+- [Liveblocks.IO](https://liveblocks.io/)
