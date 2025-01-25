@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, use, useEffect, useMemo, useState } from "react";
+import { ReactNode, useEffect, useMemo, useState } from "react";
 import {
   LiveblocksProvider,
   RoomProvider,
@@ -12,7 +12,7 @@ import { getUsers,getDocuments} from "./action";
 import { toast } from "sonner";
 import { Id } from "../../../../convex/_generated/dataModel";
 
-type User={id:string, name:string, avatar:string}
+type User={id:string, name:string, avatar:string; color:string};
 export function Room({ children }: { children: ReactNode }) {
     const params=useParams();
     const [users,setUsers]=useState<User[]>([]);

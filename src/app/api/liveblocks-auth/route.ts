@@ -29,11 +29,16 @@ export async function POST(req:Request){
     if(!isOwner&&!isOrganizationMember){
         return new Response("Unauthorized",{status:401});
     }
+    
 
+    const name=user.fullName??user.primaryEmailAddress?.emailAddress??"Anonymous";
+    const nametoNumber=name.split("").reduce((acc,curr)=>acc+curr.charCodeAt(0),0);
+    const color=`hsl(${nametoNumber%360},100%,50%)`;
     const session =liveblocks.prepareSession(user.id,{
         userInfo:{
-            name:user.fullName??user.primaryEmailAddress?.emailAddress??"Anonymous",
+            name,
             avatar:user.imageUrl,
+            color,
         },
     })
     session.allow(room,session.FULL_ACCESS);

@@ -1,11 +1,9 @@
 import { auth } from "@clerk/nextjs/server";
 import { Id } from "../../../../convex/_generated/dataModel";
 import { Document } from "./document";
-import { Editor } from "./editor";
-import { Navbar } from "./navbar";
-import { Room } from "./room";
+
 import {preloadQuery} from "convex/nextjs"
-import { Toolbar } from "./toolbar";
+
 import { api } from "../../../../convex/_generated/api";
 
 interface DocumentIdProps {

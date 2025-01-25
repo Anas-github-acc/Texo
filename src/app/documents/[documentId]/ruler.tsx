@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useStorage ,useMutation } from '@liveblocks/react';
 
 import { useRef, useState } from 'react';
@@ -51,8 +52,8 @@ export const Ruler=()=>{
     }
     }
     const handleMouseUp=()=>{
-        setIsDraggingLeft(false),
-        setIsDraggingRight(false)
+        setIsDraggingLeft(false);
+        setIsDraggingRight(false);
     };
 
     const handLeftDoubleClick=()=>{

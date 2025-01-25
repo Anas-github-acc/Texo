@@ -2,7 +2,7 @@
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import { useEditorStore } from "@/store/use-editor-store";
-import { AlignCenterIcon, AlignJustifyIcon, AlignLeftIcon, AlignRightIcon, BoldIcon, ChevronDownIcon, CodeIcon, HighlighterIcon, ImageIcon, ItalicIcon, Link2Icon, ListCollapseIcon, ListIcon, ListOrderedIcon, ListTodoIcon, LucideIcon, MessageSquareIcon, MessageSquarePlusIcon, MessagesSquareIcon, MinusIcon, PlusIcon, Printer, Redo2Icon, RemoveFormattingIcon, SearchIcon, SpellCheckIcon, UnderlineIcon, Undo2Icon, UploadIcon } from "lucide-react";
+import { AlignCenterIcon, AlignJustifyIcon, AlignLeftIcon, AlignRightIcon, BoldIcon, ChevronDownIcon, CodeIcon, HighlighterIcon, ImageIcon, ItalicIcon, Link2Icon, ListCollapseIcon, ListIcon, ListOrderedIcon, ListTodoIcon, LucideIcon,  MessageSquarePlusIcon,  MinusIcon, PlusIcon, Printer, Redo2Icon, RemoveFormattingIcon, SearchIcon, SpellCheckIcon, UnderlineIcon, Undo2Icon, UploadIcon } from "lucide-react";
 import{
     DropdownMenu,
     DropdownMenuItem,
@@ -22,8 +22,6 @@ import{type ColorResult,CirclePicker} from "react-color";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import TextAlign from "@tiptap/extension-text-align";
-import { on } from "events";
 
 interface ToolbarButtonProps{
  onClick?:()=>void;
@@ -309,7 +307,7 @@ const LineHeightButton=()=>{
 const HighlightColorButton=()=>{
     const {editor}=useEditorStore();
 
-    const value=editor?.getAttributes("highlight").color||"#FFFFFF";
+   
     const onChange=(color:ColorResult)=>{
         editor?.chain().focus().setHighlight({color: color.hex}).run();
     };
