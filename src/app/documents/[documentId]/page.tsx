@@ -1,30 +1,36 @@
+import { auth } from "@clerk/nextjs/server";
+import { Id } from "../../../../convex/_generated/dataModel";
+import { Document } from "./document";
 import { Editor } from "./editor";
 import { Navbar } from "./navbar";
 import { Room } from "./room";
-
+import {preloadQuery} from "convex/nextjs"
 import { Toolbar } from "./toolbar";
+import { api } from "../../../../convex/_generated/api";
 
 interface DocumentIdProps {
-    params:Promise<{documentId:string}>//newer next uses promise to resolve the params object
+    params:Promise<{documentId:Id<"documents">}>//newer next uses promise to resolve the params object
 }
 
-const DocumentId =  async ({params}:DocumentIdProps) => {
+const DocumentIdPage =  async ({params}:DocumentIdProps) => {
     const awaitedparams = await params;
     const documentId= awaitedparams.documentId;
-    return (<Room>
-        <div className="m-h-screen bg-[#FAFBFD]">
-            <div className="flex flex-col px-4 pt-2 gap-y-2 fixed top-0 left-0 right-0 z-10 bg-[#fafbfd] print:hidden">
-            <Navbar/>
-            <Toolbar />
-            </div>
-            <div className="pt-[114px] print:pt-0">
-                
-            <Editor/>
+    const {getToken}=await auth();
+    const token=await getToken({template:'convex'})??undefined;
+    if(!token){
+        throw new Error("Token not found");
+    }
 
-            </div>
-        </div>
-  </Room>
-      );
+    const Preloadeddocument=await preloadQuery(
+        api.documents.getById,
+        {id:documentId},
+        {token}
+    )
+
+    if(!Preloadeddocument){
+        throw new Error("Document not found");
+    }
+    return <Document predocument={Preloadeddocument}/>;
 }
  
-export default DocumentId;
+export default DocumentIdPage;
