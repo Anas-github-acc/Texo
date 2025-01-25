@@ -27,11 +27,18 @@ import { useLiveblocksExtension } from "@liveblocks/react-tiptap";
 import { Threads } from './threads'
 import { useStorage } from '@liveblocks/react'
 
+interface EditorProps{
+    initialContent?:string|undefined;
+}
 
-export const Editor=()=>{
+export const Editor=({initialContent}:EditorProps)=>{
     const leftMargin=useStorage((root)=>root.leftMargin);
     const rightMargin=useStorage((root)=>root.rightMargin);
-    const liveblocksExtension=useLiveblocksExtension();
+    const liveblocksExtension=useLiveblocksExtension(
+        {
+            initialContent,
+        }
+    );
     const {setEditor} = useEditorStore();
     const editor = useEditor({
         immediatelyRender:false,
