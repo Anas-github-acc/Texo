@@ -11,25 +11,25 @@ export function HeroParallaxDemo() {
 }
 export const products = [
   {
-    title: "Moon1beam",
+    title: "Collaboration",
     link: "https://gomoonbeam.com",
     thumbnail:
       "/1.svg",
   },
   {
-    title: "Moonb2eam",
+    title: "Better UI",
     link: "https://gomoonbeam.com",
     thumbnail:
-      "/2.jpg",
+      "/2.svg",
   },
   {
-    title: "Moonbe3am",
+    title: "Notification",
     link: "https://gomoonbeam.com",
     thumbnail:
-      "/3.jpg",
+      "/3.svg",
   },
   {
-    title: "Moo4nbeam",
+    title: "Code Showcase",
     link: "https://gomoonbeam.com",
     thumbnail:
       "/4.jpg",

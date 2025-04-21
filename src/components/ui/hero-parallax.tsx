@@ -124,11 +124,11 @@ export const Header = () => {
     <div className="max-w-7xl relative mx-auto py-10 md:py-6 px-4 w-full text-left">
       <div className="bg-[#1f1f1f] rounded-md p-8 md:p-16 relative z-50 gap-5 flex flex-col items-center justify-center">
         <div className="flex flex-col text-2xl md:text-7xl font-bold text-[#f2f2f2] text-center gap-5">
-          <span className="text-blue-300 text-7xl">Git For Spreadsheet</span>
+          <span className="text-blue-300 text-7xl">Better Document </span>
           <span className="text-6xl text-[#f2f2f2]">Collaborate without chaos</span>
         </div>
         <p className="max-w-full text-[#f2f2f2]/90 md:text-xl mt-5 text-center ">
-          Full version control, seamless conflict resolution, and multi-user workflows <br/> built for teams who can't afford to lose data
+          Collaborative, seamless conflict resolution, and multi-user workflows <br/> built for teams who can't afford to lose data
         </p>
         <div className="mt-8 items-center justify-center flex gap-3">
           <Button onClick={handleGetStarted} className="px-6 py-6  text-black/70 bg-[#f2f2f2] hover:bg-[#f2f2f2]/70 rounded-sm shadow-lg transition-all duration-300 font-bold cursor-pointer">
@@ -199,7 +199,7 @@ export default function AIApplicationSection() {
           sub: "Traditional spreadsheets permit concurrent edits without robust conflict resolution, increasing the risk of unintended data overwrites. Implementing an author approval mechanism ensures that conflicting changes are reviewed before finalization, thereby preserving data integrity.",
         }
       ],
-      image: "/image1.png",
+      image: "/1.svg",
     },
     {
       id: "2", // Add ID for the feature
@@ -218,7 +218,7 @@ export default function AIApplicationSection() {
           sub: "Studies indicate that 88% to 94% of business spreadsheets contain errors. Implementing structured version control significantly enhances data accuracy and reliability.",
         }
       ],
-      image: "/image2.png",
+      image: "/2.svg",
     },
     {
       id: "3", // Add ID for the feature
@@ -233,7 +233,7 @@ export default function AIApplicationSection() {
           sub: "Spreadsheet inaccuracies have resulted in substantial financial losses. Notably, JPMorgan Chase suffered a $6 billion trading loss in 2012 due in part to spreadsheet errors.",
         }
       ],
-      image: "/image3.png",
+      image: "/3.svg",
     },
     {
       id: "4", // Add ID for the feature
@@ -244,7 +244,7 @@ export default function AIApplicationSection() {
           sub: "Traditional spreadsheets lack the flexibility to enforce role-based editing priorities. Our system allows organizations to implement custom merge strategies, ensuring that high-level approvals align with operational workflows.",
         }
       ],
-      image: "/image4.png",
+      image: "/4.jpg",
     }
   ];
 
@@ -276,7 +276,7 @@ export default function AIApplicationSection() {
           </div>
 
           {/* Image Section */}
-          <div className="relative mt-10 ml-20 lg:mt-0">
+          <div className="relative mt-10 ml-20 mr-20 lg:mt-0">
             <img
               src={feature.image}
               alt={feature.title}

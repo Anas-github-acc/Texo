@@ -29,12 +29,12 @@ const onRowClick=(id:string)=>{
             <TableCell className="font-medium md:w-[45%]">
                 {document.title}
             </TableCell>
-            <TableCell className="text-muted-foreground hidden md:flex items-center gap-2">
+            <TableCell className="text-[#f3f3f3] hidden md:flex items-center gap-2">
                 {document.organizationId?<Building2Icon className="size-4"/>:<CircleUserIcon className="size-4 "/>}
                 {document.organizationId?"Shared":"Private"}
 
             </TableCell>
-            <TableCell className="text-muted-foreground hidden md:table-cell">
+            <TableCell className="text-[#f3f3f3] hidden md:table-cell">
             {format(new Date(document._creationTime),"MMM dd, yyyy")}
             </TableCell>
             <TableCell className="flex  justify-end">

@@ -30,7 +30,7 @@ export const TemplateGallery = () => {
     }
 
     return(
-        <div className="bg-[#f1f3f4]">
+        <div className="bg-[#1f1f1f]">
            <div className="max-w-screen-xl mx-auto px-16 py-6 flex flex-col gap-y-4">
             <h3 className=" font-medium">
                 Start a new document
@@ -68,8 +68,8 @@ export const TemplateGallery = () => {
                     </CarouselItem>
                         ))}
                 </CarouselContent>
-                <CarouselPrevious/>
-                <CarouselNext/>
+                <CarouselPrevious className='text-black'/>
+                <CarouselNext className='text-black'/>
             </Carousel>
            </div>
         </div>

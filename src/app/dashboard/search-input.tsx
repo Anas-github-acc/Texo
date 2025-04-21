@@ -34,7 +34,7 @@ export const SearchInput=()=>{
                 onChange={handleChange}
                 ref={inputRef}
                 placeholder="Search"
-                className="md:text-base w-full border-none focus-visible:shadow-[0_1px_1px_0_rgba(65,69,73.3),0_1px_3px_1px_rgba(65,69,73,.15)] placeholder:text-neutral-800 rounded-full focus:bg-white rounded:full focus-visible:ring-0 px-14 bg-[#f0f4f8]"/>
+                className="md:text-base w-full border-none focus-visible:shadow-[0_1px_1px_0_rgba(65,69,73.3),0_1px_3px_1px_rgba(65,69,73,.15)] placeholder:text-white rounded-full focus:bg-[#111111] rounded:full focus-visible:ring-0 px-14 bg-[#111f1f]"/>
            <Button
            type="submit"
            variant='ghost'

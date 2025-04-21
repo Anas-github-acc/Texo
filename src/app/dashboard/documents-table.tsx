@@ -32,10 +32,10 @@ status
             <Table>
                 <TableHeader>
                     <TableRow className="hover:bg-transparent border-none">
-                        <TableHead>Name</TableHead>
+                        <TableHead className="text-white">Name</TableHead>
                         <TableHead>&nbsp;</TableHead>
-                        <TableHead className="hidden md:table-cell">Shared</TableHead>
-                        <TableHead className="hidden md:table-cell">Created at</TableHead>
+                        <TableHead className="hidden text-white md:table-cell">Shared</TableHead>
+                        <TableHead className="hidden text-white md:table-cell">Created at</TableHead>
 
                     </TableRow>
                 </TableHeader>
