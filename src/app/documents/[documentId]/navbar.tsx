@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image"
 import Link from "next/link"
+import { useState } from "react"
 import { DocumentInput } from "./document-input"
 import{
     Menubar,
@@ -28,6 +29,9 @@ import { useRouter } from "next/navigation"
 import { toast } from "sonner"
 import { RenameDialog } from "@/components/rename-dialog"
 import { RemoveDialog } from "@/components/remove-dialog"
+import GeminiChat from '@/components/GeminiChat'
+import GeminiButton from "@/components/GeminiButton"
+
 
 interface NavbarProps{
     data:Doc<"documents">;
@@ -44,6 +48,17 @@ export const Navbar = ({data}:NavbarProps) => {
             toast.success("Document created");
             router.push(`/documents/${id}`);
         })
+    }
+
+    // const [isOpen, setIsOpen] = useState(false)
+    const [isChatOpen, setIsChatOpen] = useState(false)
+
+    // const toggleMenu = () => {
+    //     setIsOpen(!isOpen)
+    // }
+
+    const toggleChat = () => {
+        setIsChatOpen(!isChatOpen)
     }
 
     const {editor}=useEditorStore();
@@ -237,6 +252,7 @@ export const Navbar = ({data}:NavbarProps) => {
             </div>
             <div className="flex gap-3 items-center pl-6">
                 <Avatar/>
+                <GeminiButton onClick={toggleChat} />
                 <Inbox/>
             <OrganizationSwitcher
             afterCreateOrganizationUrl='/'
@@ -245,6 +261,7 @@ export const Navbar = ({data}:NavbarProps) => {
             afterSelectPersonalUrl='/' />
            <UserButton/>
            </div>
+            <GeminiChat isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
         </nav>
     )
 }
