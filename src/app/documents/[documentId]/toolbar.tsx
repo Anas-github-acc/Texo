@@ -69,7 +69,7 @@ const FontFamilyButton=()=>{
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
             <button
-            className="h-7 w-[120px] shrink-0 flex items-center justify-between rounded-sm hover:bg-neutral-200/80 px-1.5 overflow-hidden text-sm">
+            className="h-7 w-[120px] shrink-0 flex items-center justify-between rounded-sm hover:bg-secondary px-1.5 overflow-hidden text-sm">
                 <span className="truncate">
                 {editor?.getAttributes("textStyle").fontFamily||"Arial"}
                 </span>
@@ -82,8 +82,8 @@ const FontFamilyButton=()=>{
             onClick={()=> editor?.chain().focus().setFontFamily(value).run()}
             key={value}
             className={cn(
-                "flex items-center gap-x-2 px-2 py-1 rounded-sm font-[value] hover:bg-neutral-200/80",
-                editor?.getAttributes("textStyle").fontFamily===value&&"bg-neutral-200/80"
+                "flex items-center gap-x-2 px-2 py-1 rounded-sm font-[value] hover:bg-secondary",
+                editor?.getAttributes("textStyle").fontFamily===value&&"bg-secondary"
             )}
             style={{fontFamily:value}}>
                 <span className="text-sm">{label}</span>
@@ -105,7 +105,7 @@ const TextColorButton=()=>{
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <button title="Text Color" className="h-7  min-w-7 shrink-0 flex flex-col items-center justify-center rounded-sm hover:bg-neutral-200/80 px-1.5 overflow-hidden text-sm">
+                <button title="Text Color" className="h-7  min-w-7 shrink-0 flex flex-col items-center justify-center rounded-sm hover:bg-secondary px-1.5 overflow-hidden text-sm">
                 <span className="text-xs">A</span>
                 <div className="h-0.5 w-full" style={{backgroundColor:value}}></div>
                 </button>
@@ -136,7 +136,7 @@ const ListButton=()=>{
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <button title="List" className="h-7  min-w-7 shrink-0 flex flex-col items-center justify-center rounded-sm hover:bg-neutral-200/80 px-1.5 overflow-hidden text-sm">
+                <button title="List" className="h-7  min-w-7 shrink-0 flex flex-col items-center justify-center rounded-sm hover:bg-secondary px-1.5 overflow-hidden text-sm">
                <ListIcon className="size-4" />
                 </button>
             </DropdownMenuTrigger>
@@ -146,8 +146,8 @@ const ListButton=()=>{
                     onClick={onClick}
                     key={label}
                     className={cn(
-                        "flex items-center gap-x-2 px-2 py-1 rounded-sm hover:bg-neutral-200/80",
-                        isActive()&&"bg-neutral-200/80"
+                        "flex items-center gap-x-2 px-2 py-1 rounded-sm hover:bg-secondary",
+                        isActive()&&"bg-secondary"
                     )}
                     >
                         <Icon className="size-4"/>
@@ -209,7 +209,7 @@ const FontSizeButton=()=>{
        <div className="flex items-center gap-x-0.5">
        <button 
         onClick={decrement}
-       className="h-7  w-7 shrink-0 flex  items-center justify-center rounded-sm hover:bg-neutral-200/80 ">
+       className="h-7  w-7 shrink-0 flex  items-center justify-center rounded-sm hover:bg-secondary ">
         <MinusIcon className="size-4" />
        </button>
        {isEditing?(
@@ -219,16 +219,16 @@ const FontSizeButton=()=>{
            onChange={handleInputChange}
            onBlur={handleInputBlur}
            onKeyDown={handleInputKeyDown}
-           className="h-7  w-10 text-sm text-center border-2 border-netural-400 rounded-sm bg-white focus:outline-none focus:ring-0"/>
+           className="h-7  w-10 text-sm text-center border-2 border-netural-400 rounded-sm bg-background focus:outline-none focus:ring-0"/>
         ):(
             <button onClick={()=>{setIsEditing(true);
                 setFontSize(currentFontSize)}}
-            className="h-7  w-10 text-sm border-2  text-center border-netural-800 rounded-sm bg-white cursor-text">
+            className="h-7  w-10 text-sm border-2  text-center border-netural-800 rounded-sm bg-background cursor-text">
                 {currentFontSize}
             </button>)}
             <button 
         onClick={increment}
-       className="h-7  w-7 shrink-0 flex  items-center justify-center rounded-sm hover:bg-neutral-200/80 ">
+       className="h-7  w-7 shrink-0 flex  items-center justify-center rounded-sm hover:bg-secondary ">
         <PlusIcon className="size-4" />
        </button>
        </div>
@@ -246,7 +246,7 @@ const AlignButton=()=>{
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <button title="Align" className="h-7  min-w-7 shrink-0 flex flex-col items-center justify-center rounded-sm hover:bg-neutral-200/80 px-1.5 overflow-hidden text-sm">
+                <button title="Align" className="h-7  min-w-7 shrink-0 flex flex-col items-center justify-center rounded-sm hover:bg-secondary px-1.5 overflow-hidden text-sm">
                <AlignLeftIcon className="size-4" />
                 </button>
             </DropdownMenuTrigger>
@@ -256,8 +256,8 @@ const AlignButton=()=>{
                     onClick={()=>editor?.chain().focus().setTextAlign(value).run()}
                     key={value}
                     className={cn(
-                        "flex items-center gap-x-2 px-2 py-1 rounded-sm hover:bg-neutral-200/80",
-                        editor?.isActive({textAlign:value})&&"bg-neutral-200/80"
+                        "flex items-center gap-x-2 px-2 py-1 rounded-sm hover:bg-secondary",
+                        editor?.isActive({textAlign:value})&&"bg-secondary"
                     )}
                     >
                         <Icon className="size-4"/>
@@ -282,7 +282,7 @@ const LineHeightButton=()=>{
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <button title="Line Height" className="h-7  min-w-7 shrink-0 flex flex-col items-center justify-center rounded-sm hover:bg-neutral-200/80 px-1.5 overflow-hidden text-sm">
+                <button title="Line Height" className="h-7  min-w-7 shrink-0 flex flex-col items-center justify-center rounded-sm hover:bg-secondary px-1.5 overflow-hidden text-sm">
                <ListCollapseIcon className="size-4" />
                 </button>
             </DropdownMenuTrigger>
@@ -292,8 +292,8 @@ const LineHeightButton=()=>{
                     onClick={()=>editor?.chain().focus().setLineHeight(value).run()}
                     key={value}
                     className={cn(
-                        "flex items-center gap-x-2 px-2 py-1 rounded-sm hover:bg-neutral-200/80",
-                        editor?.getAttributes("paragraph").lineHeight===value&&"bg-neutral-200/80"
+                        "flex items-center gap-x-2 px-2 py-1 rounded-sm hover:bg-secondary",
+                        editor?.getAttributes("paragraph").lineHeight===value&&"bg-secondary"
                     )}
                     >
                         <span className="text-sm">{label}</span>
@@ -315,7 +315,7 @@ const HighlightColorButton=()=>{
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <button title="Highlight" className="h-7  min-w-7 shrink-0 flex flex-col items-center justify-center rounded-sm hover:bg-neutral-200/80 px-1.5 overflow-hidden text-sm">
+                <button title="Highlight" className="h-7  min-w-7 shrink-0 flex flex-col items-center justify-center rounded-sm hover:bg-secondary px-1.5 overflow-hidden text-sm">
                <HighlighterIcon className="size-4" />
                 </button>
             </DropdownMenuTrigger>
@@ -353,7 +353,7 @@ const HeadingLevelButton=()=>{
        <DropdownMenu>
             <DropdownMenuTrigger asChild>
             <button
-            className="h-7 w-[120px] min-w-7 shrink-0 flex items-center justify-center rounded-sm hover:bg-neutral-200/80 px-1.5 overflow-hidden text-sm">
+            className="h-7 w-[120px] min-w-7 shrink-0 flex items-center justify-center rounded-sm hover:bg-secondary px-1.5 overflow-hidden text-sm">
                 <span className="truncate">
                 {getCurrentHeading()}
                 </span>
@@ -373,8 +373,8 @@ const HeadingLevelButton=()=>{
                 key={value}
                 style={{ fontSize }}
                 className={cn(
-                    "flex items-center gap-x-2 px-2 py-1 rounded-sm font-[value] hover:bg-neutral-200/80",
-                    (value===0 && !editor?.isActive("heading"))||editor?.isActive("heading",{level:value})&&"bg-neutral-200/80"
+                    "flex items-center gap-x-2 px-2 py-1 rounded-sm font-[value] hover:bg-secondary",
+                    (value===0 && !editor?.isActive("heading"))||editor?.isActive("heading",{level:value})&&"bg-secondary"
                 )}
                 >
                     {label}
@@ -401,7 +401,7 @@ const LinkButton=()=>{
             }
         }}>
             <DropdownMenuTrigger asChild>
-                <button title="Link" className="h-7  min-w-7 shrink-0 flex flex-col items-center justify-center rounded-sm hover:bg-neutral-200/80 px-1.5 overflow-hidden text-sm">
+                <button title="Link" className="h-7  min-w-7 shrink-0 flex flex-col items-center justify-center rounded-sm hover:bg-secondary px-1.5 overflow-hidden text-sm">
                <Link2Icon className="size-4" />
                 </button>
             </DropdownMenuTrigger>
@@ -452,7 +452,7 @@ const ImageButton=()=>{
         <>
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <button title="Image" className="h-7  min-w-7 shrink-0 flex flex-col items-center justify-center rounded-sm hover:bg-neutral-200/80 px-1.5 overflow-hidden text-sm">
+                <button title="Image" className="h-7  min-w-7 shrink-0 flex flex-col items-center justify-center rounded-sm hover:bg-secondary px-1.5 overflow-hidden text-sm">
                <ImageIcon className="size-4"  />
                 </button>
             </DropdownMenuTrigger>
@@ -505,8 +505,8 @@ const ToolbarButton=({
     return(
         <button onClick={onClick}
         className={cn(
-            "text-sm h-7 min-w-7 flex items-center justify-center rounded-sm hover:bg-neutral-200/80",
-            isActive && "bg-neutral-200/80"
+            "text-sm h-7 min-w-7 flex items-center justify-center rounded-sm hover:bg-secondary",
+            isActive && "bg-background/80"
         )}>
             <Icon className="size-4"/>
         </button>
@@ -596,23 +596,23 @@ export const Toolbar = () => {
         ],
     ];
     return (
-        <div className="bg-[#f1f4f9] px-2.5 py-0.5 rounded-[24px] min-h-[40px] flex items-center gap-x-0.5 overflow-x-auto print:hidden">
+        <div className="bg-card px-2.5 py-0.5 rounded-[24px] min-h-[40px] flex items-center gap-x-0.5 overflow-x-auto print:hidden">
            {sections[0].map((item)=>(
             <ToolbarButton key={item.label}{...item}/>
         ))}
-        <Separator orientation="vertical" className="h-6 bg-neutral-300"/>
+        <Separator orientation="vertical" className="h-6 bg-background"/>
        <FontFamilyButton />
-        <Separator orientation="vertical" className="h-6 bg-neutral-300"/>
+        <Separator orientation="vertical" className="h-6 bg-background"/>
         <HeadingLevelButton/>
-        <Separator orientation="vertical" className="h-6 bg-neutral-300"/>
+        <Separator orientation="vertical" className="h-6 bg-background"/>
        <FontSizeButton/>
-        <Separator orientation="vertical" className="h-6 bg-neutral-300"/>
+        <Separator orientation="vertical" className="h-6 bg-background"/>
         {sections[1].map((item)=>(
             <ToolbarButton key={item.label}{...item}/>
         ))}
         <TextColorButton/>
         <HighlightColorButton/>
-        <Separator orientation="vertical" className="h-6 bg-neutral-300"/>
+        <Separator orientation="vertical" className="h-6 bg-background"/>
         <LinkButton/>
         <ImageButton/>
         <AlignButton />
