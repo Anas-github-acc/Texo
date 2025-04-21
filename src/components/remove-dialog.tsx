@@ -53,7 +53,7 @@ return(
             remove({id:documentId})
 
             .then(()=>{toast.success("Document deleted")
-            router.push("/");
+            router.push("/dashboard");
             })
             .catch(()=>toast.error("Failed to delete document"))
             .finally(()=>{

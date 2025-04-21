@@ -192,61 +192,62 @@ export default function AIApplicationSection() {
   const features = [
     {
       id: "1", // Add ID for the feature
-      title: "Conflict Resolution for Enhanced Control",
+      title: "Real-time Collaborative Editing",
       description: [
         {
-          main: "Mitigating Data Loss:",
-          sub: "Traditional spreadsheets permit concurrent edits without robust conflict resolution, increasing the risk of unintended data overwrites. Implementing an author approval mechanism ensures that conflicting changes are reviewed before finalization, thereby preserving data integrity.",
+          main: "Seamless Teamwork:",
+          sub: "Multiple users can edit documents simultaneously with changes appearing instantly. See who's working where with cursor presence indicators and user attribution for all edits.",
         }
       ],
-      image: "/1.svg",
+      image: "/5.jpg",
     },
     {
       id: "2", // Add ID for the feature
-      title: "Version Control for Greater Accountability",
+      title: "Cloud-based Document Storage",
       description: [
         {
-          main: "• Comprehensive Change Tracking:",
-          sub: "Every modification is recorded in a structured commit system, allowing users to track edits with full transparency.",
+          main: "• Automatic Saving:",
+          sub: "Never lose work with continuous auto-saving that captures every change.",
         },
         {
-          main: "• Facilitates Rollbacks & Audit Trails:",
-          sub: "Essential for teams managing critical datasets, enabling precise error identification and resolution.",
+          main: "• Access Anywhere:",
+          sub: "Access your documents from any device with an internet connection.",
         },
         {
-          main: "Minimizing Spreadsheet Errors:",
-          sub: "Studies indicate that 88% to 94% of business spreadsheets contain errors. Implementing structured version control significantly enhances data accuracy and reliability.",
+          main: "• Secure Backup:",
+          sub: "Documents are securely stored in the cloud, eliminating the risk of local device failures.",
         }
       ],
-      image: "/2.svg",
+      image: "/6.jpg",
     },
     {
       id: "3", // Add ID for the feature
-      title: "Optimized for Multi-User Collaboration",
+      title: "Comprehensive Formatting Tools",
       description: [
         {
-          main: "• Ensuring Accuracy Before Merging:",
-          sub: "In fields such as finance, legal documentation, and software planning—where accuracy is paramount—our system verifies changes before integration.",
+          main: "• Rich Text Editing:",
+          sub: "Format text with various fonts, sizes, colors, and styles to create professional-looking documents.",
         },
         {
-          main: "Addressing High-Stakes Spreadsheet Risks:",
-          sub: "Spreadsheet inaccuracies have resulted in substantial financial losses. Notably, JPMorgan Chase suffered a $6 billion trading loss in 2012 due in part to spreadsheet errors.",
+          main: "• Style Consistency:",
+          sub: "Apply consistent document styling with customizable templates and style guides.",
         }
       ],
-      image: "/3.svg",
+      image: "/7.jpg",
     },
     {
       id: "4", // Add ID for the feature
-      title: "Flexible Data Handling for Organizational Needs",
+      title: "Advanced Sharing & Permissions",
       description: [
         {
-          main: "Adaptive Hierarchical Customization:",
-          sub: "Traditional spreadsheets lack the flexibility to enforce role-based editing priorities. Our system allows organizations to implement custom merge strategies, ensuring that high-level approvals align with operational workflows.",
+          main: "Granular Access Control:",
+          sub: "Share documents with specific permissions—view only, comment, or edit. Set individual or group access levels to maintain document security while enabling collaboration.",
         }
       ],
-      image: "/4.jpg",
-    }
-  ];
+      image: "/8.jpg",
+}
+];
+
 
   return (
     <div className="bg-[#1f1f1f] text-white py-24 px-10 space-y-24">
@@ -280,7 +281,7 @@ export default function AIApplicationSection() {
             <img
               src={feature.image}
               alt={feature.title}
-              className="w-[500px] rounded-lg shadow-lg"
+              className="w-[800px] rounded-lg shadow-lg"
             />
           </div>
         </div>

@@ -27,27 +27,27 @@ const getBlogPost = (id: string): BlogPost | null => {
   const posts: Record<string, BlogPost> = {
     "1": {
       id: "1",
-      title: "Conflict Resolution for Enhanced Control",
+      title: "Real-time Collaborative Editing",
       description: [
         {
-          main: "Mitigating Data Loss:",
-          sub: "Traditional spreadsheets permit concurrent edits without robust conflict resolution, increasing the risk of unintended data overwrites. Implementing an author approval mechanism ensures that conflicting changes are reviewed before finalization, thereby preserving data integrity.",
+          main: "Seamless Teamwork:",
+          sub: "Multiple users can edit documents simultaneously with changes appearing instantly. See who's working where with cursor presence indicators and user attribution for all edits.",
         },
         {
-          main: "Enhancing Collaborative Workflows:",
-          sub: "In multi-user environments, structured conflict resolution workflows foster accountability and transparency. Rather than immediately overwriting edits, users can propose changes that are queued for review, ensuring that the most accurate and contextually appropriate data is retained.",
+          main: "Enhanced Communication:",
+          sub: "Chat functionality integrated directly in documents allows team members to discuss changes in context without switching to external messaging platforms, streamlining the collaboration process.",
         },
         {
-          main: "Version Control and Audit Trails:",
-          sub: "Maintaining detailed version histories enables teams to trace changes over time. In case of conflicting updates, prior versions can be referenced to determine the most suitable resolution. Additionally, audit trails promote trust among collaborators by making editing histories fully visible.",
+          main: "Smart Suggestions:",
+          sub: "AI-powered writing suggestions help improve document quality as you type. The system offers grammar corrections, style improvements, and content recommendations to enhance your writing.",
         },
         {
-          main: "Customizable Approval Hierarchies:",
-          sub: "Not all conflicts are created equal. By introducing customizable approval hierarchies based on user roles and data sensitivity, organizations can optimize conflict handling. Critical changes may require higher-level approvals, while minor edits can be resolved at the peer level.",
+          main: "Comment Resolution System:",
+          sub: "Leave comments for specific sections that can be discussed, addressed, and resolved, maintaining a clean document while preserving the conversation history for future reference.",
         },
         {
-          main: "Automated Conflict Detection:",
-          sub: "Advanced systems can detect conflicts in real time by monitoring simultaneous edits and highlighting potential issues before they escalate. Proactive conflict alerts reduce downtime and prevent costly errors caused by uncoordinated changes.",
+          main: "Activity Dashboard:",
+          sub: "Track document history with a comprehensive view of who made which changes and when. This timeline provides complete visibility into the document's evolution over time.",
         },
       ],
       author: {
@@ -59,19 +59,19 @@ const getBlogPost = (id: string): BlogPost | null => {
     },
     "2": {
       id: "2",
-      title: "Version Control for Greater Accountability",
+      title: "Cloud-based Document Storage",
       description: [
         {
-          main: "• Comprehensive Change Tracking:",
-          sub: "Every modification is recorded in a structured commit system, allowing users to track edits with full transparency.",
+          main: "• Automatic Saving:",
+          sub: "Never lose work with continuous auto-saving that captures every change, eliminating the worry of unexpected power outages or application crashes.",
         },
         {
-          main: "• Facilitates Rollbacks & Audit Trails:",
-          sub: "Essential for teams managing critical datasets, enabling precise error identification and resolution.",
+          main: "• Access Anywhere:",
+          sub: "Access your documents from any device with an internet connection, whether you're at your desk, on your phone, or using a tablet.",
         },
         {
-          main: "Minimizing Spreadsheet Errors:",
-          sub: "Studies indicate that 88% to 94% of business spreadsheets contain errors. Implementing structured version control significantly enhances data accuracy and reliability.",
+          main: "• Secure Backup:",
+          sub: "Documents are securely stored in the cloud, eliminating the risk of local device failures and ensuring your important files are always protected.",
         },
       ],
       author: {
@@ -83,19 +83,19 @@ const getBlogPost = (id: string): BlogPost | null => {
     },
     "3": {
       id: "3",
-      title: "Optimized for Multi-User Collaboration",
+      title: "Comprehensive Formatting Tools",
       description: [
         {
-          main: "• Ensuring Accuracy Before Merging:",
-          sub: "In fields such as finance, legal documentation, and software planning—where accuracy is paramount—our system verifies every proposed change before it is integrated. This multi-step verification prevents errors from entering final datasets and maintains high operational standards.",
+          main: "• Rich Text Editing:",
+          sub: "Format text with various fonts, sizes, colors, and styles to create professional-looking documents that meet your exact specifications and brand guidelines.",
         },
         {
-          main: "Addressing High-Stakes Spreadsheet Risks:",
-          sub: "Spreadsheet inaccuracies have historically led to catastrophic financial outcomes. For example, JPMorgan Chase suffered a $6 billion trading loss in 2012, partly due to undetected spreadsheet errors. Our system introduces rigorous review pipelines, preventing minor oversights from escalating into major setbacks.",
+          main: "Style Consistency:",
+          sub: "Apply consistent document styling with customizable templates and style guides. Create and save custom styles to ensure visual harmony across all your organization's documents.",
         },
         {
-          main: "Real-Time Collaborative Editing:",
-          sub: "Unlike traditional methods, our platform supports real-time collaboration without compromising data integrity. Smart locking, change suggestions, and collaborative merging tools ensure users can work simultaneously with confidence.",
+          main: "Advanced Layout Options:",
+          sub: "Organize content with tables, columns, headers, footers, and page numbering. Create structured documents with table of contents generation and section breaks for professional-quality outputs.",
         },
       ],
       author: {
@@ -107,19 +107,19 @@ const getBlogPost = (id: string): BlogPost | null => {
     },
     "4": {
       id: "4",
-      title: "Flexible Data Handling for Organizational Needs",
+      title: "Advanced Sharing & Permissions",
       description: [
         {
-          main: "Adaptive Hierarchical Customization:",
-          sub: "Traditional spreadsheets often enforce flat access models, limiting the ability to tailor collaboration workflows. Our platform introduces adaptive hierarchical structures, enabling organizations to set editing rights, review gates, and role-specific merge strategies aligned with operational needs.",
+          main: "Granular Access Control:",
+          sub: "Share documents with specific permissions—view only, comment, or edit. Set individual or group access levels to maintain document security while enabling collaboration.",
         },
         {
-          main: "Custom Merge Strategies by Department:",
-          sub: "Marketing, finance, legal, and engineering teams each have unique workflows. Our system supports customized merge behaviors per department, ensuring that changes are integrated with respect to the specific priorities and regulatory requirements of each domain.",
+          main: "Custom Sharing Links:",
+          sub: "Generate shareable links with preset permission levels that can be sent to collaborators without needing to configure access for each user individually, streamlining the sharing workflow.",
         },
         {
-          main: "Scalable Permission Management:",
-          sub: "As organizations grow, managing access at scale becomes complex. Our flexible permissioning framework evolves alongside your team's size and structure, maintaining security without sacrificing usability.",
+          main: "Expiration Settings:",
+          sub: "Set time limits on document access to ensure sensitive information remains protected. Temporary access can be granted and automatically revoked after a specified period.",
         },
       ],
       author: {
@@ -127,7 +127,7 @@ const getBlogPost = (id: string): BlogPost | null => {
         avatar: "https://i.pravatar.cc/150?u=michael", // avatar for Michael
       },
       publishedDate: "Apr 05, 2024",
-      lastUpdated: "Apr 18, 2024",
+      lastUpdated: "Apr 18, 2024",
     },
   };
   
