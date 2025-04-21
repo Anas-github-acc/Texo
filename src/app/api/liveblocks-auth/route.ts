@@ -7,7 +7,8 @@ const convex =new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
 export async function POST(req:Request){
     const liveblocks=new Liveblocks({
-        secret:process.env.LIVEBLOCK_SPECIAL_KEY!});
+        secret:process.env.LIVEBLOCK_SPECIAL_KEY!,
+    });
     const {sessionClaims}=await auth();
     if(!sessionClaims){
         return new Response("Unauthorized",{status:401});
@@ -21,7 +22,7 @@ export async function POST(req:Request){
     const document =await convex.query(api.documents.getById,{id:room});
 
     if(!document){
-        return new Response("Not Found",{status:404});
+        return new Response("Not Found",{status:401});
     }
 
     const isOwner=document.ownerId===user.id;

@@ -17,10 +17,10 @@ export const Navbar=()=>{
            <div className="flex gap-3 items-center pl-6">
         
             <OrganizationSwitcher
-            afterCreateOrganizationUrl='/'
-            afterLeaveOrganizationUrl="/"
-            afterSelectOrganizationUrl='/'
-            afterSelectPersonalUrl='/' />
+            afterCreateOrganizationUrl='/dashboard'
+            afterLeaveOrganizationUrl="/dashboard"
+            afterSelectOrganizationUrl='/dashboard'
+            afterSelectPersonalUrl='/dashboard' />
            <UserButton/>
            </div>
         </nav>
