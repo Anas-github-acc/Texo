@@ -179,7 +179,7 @@ export default function GeminiChat({ isOpen, onClose }: GeminiChatProps) {
 
       <div className="flex flex-col h-full">
         <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-lg font-semibold text-foreground">Gemini Chat</h2>
+          <h2 className="text-lg font-semibold text-foreground">Tokio Chat</h2>
           <button
             onClick={onClose}
             className="text-foreground hover:text-foreground/80 focus:outline-none"

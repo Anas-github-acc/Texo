@@ -134,8 +134,8 @@ export const Header = () => {
           <Button onClick={handleGetStarted} className="px-6 py-6  text-black/70 bg-[#f2f2f2] hover:bg-[#f2f2f2]/70 rounded-sm shadow-lg transition-all duration-300 font-bold cursor-pointer">
             Get Started
           </Button>
-          <Button className="px-6 py-6  text-[#ffffff]/70 bg-[#1b1b1b] hover:bg-[#fff]/1 rounded-sm transition-all duration-300 font-normal border border-[#ffffff]/10 cursor-pointer">
-            Docs
+          <Button onClick={()=>{router.push("/code")}} className="px-6 py-6  text-[#ffffff]/70 bg-[#1b1b1b] hover:bg-[#fff]/1 rounded-sm transition-all duration-300 font-normal border border-[#ffffff]/10 cursor-pointer">
+            Code
           </Button>
         </div>
       </div>
