@@ -2,6 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
+import { Button } from "@/components/ui/button"
 import { DocumentInput } from "./document-input"
 import{
     Menubar,
@@ -245,6 +246,7 @@ export const Navbar = ({data}:NavbarProps) => {
                             </MenubarItem>
                         </MenubarContent>
                     </MenubarMenu>
+                    <Button variant="ghost" size="lg" onClick={()=>router.push('/code')}>Code</Button>
                      </Menubar>
 
                 </div>
