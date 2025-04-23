@@ -261,7 +261,7 @@ export const Navbar = ({data}:NavbarProps) => {
             afterSelectPersonalUrl='/' />
            <UserButton/>
            </div>
-            <GeminiChat isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
+            <GeminiChat isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} documentContent={data.initialContent} />
         </nav>
     )
 }
