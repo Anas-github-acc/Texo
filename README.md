@@ -1,101 +1,182 @@
 # 📄 Google Docs Clone with Tiptap Editor
 
-This project is a web-based document editor inspired by Google Docs. It is built using the [Tiptap Editor](https://tiptap.dev/) and provides real-time collaboration, rich text editing, and document management features.
+A modern, feature-rich document editor built with Next.js and Tiptap, offering real-time collaboration and AI-powered assistance. This project combines powerful editing capabilities with seamless collaboration features.
 
-## ✨ Features
+## ✨ Key Features
 
-- 📝 **Rich Text Editing**: Bold, italic, underline, headings, lists, and more.
-- 👥 **Collaboration**: Real-time editing with multiple users (via WebSocket or similar).
-- 🔒 **User Authentication**: Login and manage users.
-- 📂 **Document Management**: Create, edit, save, and delete documents.
-- 📱 **Responsive Design**: Works across devices (desktop, tablet, and mobile).
+### 📝 Rich Text Editing
 
-## 🛠️ Tech Stack
+- Full-featured text formatting (bold, italic, underline)
+- Multiple heading levels
+- Nested lists (bullet and numbered)
+- Task lists with checkboxes
+- Code blocks with syntax highlighting
+- Custom font families and sizes
+- Text alignment options
+- Line height control
+- Table support with resizable columns
+- Image insertion with resize capability
+- Horizontal rules and text highlighting
 
-- **Framework**: Next.js
-- **Editor**: Tiptap Editor
-- **Styling**: Tailwind CSS, ShadCN UI Library
-- **Database**: MongoDB (or any NoSQL/SQL database of choice)
-- **Real-time Collaboration**: WebSockets (Socket.IO or similar)
-- **Authentication**: JWT or OAuth (e.g., Firebase Auth or Clerk)
+### 👥 Real-time Collaboration
 
-## 📋 Prerequisites
+- Multi-user simultaneous editing
+- Cursor presence indicators
+- User attribution for edits
+- Collaborative comments and threads
+- Real-time conflict resolution
+- Offline support with automatic syncing
 
-Before you begin, ensure you have the following installed on your system:
+### 🤖 AI Integration
 
-- 🚀 Node.js (v16 or higher)
-- 📦 npm or yarn
-- 🗄️ MongoDB (if using a local database)
+- Gemini API enables real-time AI chat support. (Streaming response using ReadableStream)
+- RAG pipeline ensures precise, efficient document query processing.
 
-## 🚀 Installation
+### 📂 Document Management
 
-1. **Clone the Repository**
+- Create and organize documents
+- Auto-saving functionality
+- Document templates
+- Export to multiple formats (.html, .json, .txt, .pdf)
+- Search functionality
+- Organization-based document sharing
 
-   ```bash
-   git clone https://github.com/yourusername/google-docs-clone.git
-   cd google-docs-clone
-   ```
+### 💻 Code Editing Features
 
-2. **Install Dependencies**
+- **Monaco Editor Integration** (@monaco-editor/react)
+  - Syntax highlighting for multiple languages
+  - Multi-file support
+    - HTML
+    - CSS
+    - JavaScript
+  - Live code execution
+  - Real-time preview
+  - Code formatting
+  - Error highlighting
+  - Line numbers and minimap
 
-   ```bash
-   npm install
-   ```
+## 🛠️ Technical Stack
 
-3. **Set Up Environment Variables**
+### Frontend
 
-   Create a `.env` file in the root directory and configure the required variables:
+- **Next.js 14**: React framework with App Router
+- **TypeScript**: Type-safe development
+- **Tiptap**: Rich text editor framework
+- **Monaco Editor**: Code editing capabilities
+- **TailwindCSS**: Utility-first CSS
+- **ShadcN UI**: Modern UI components
+- **Lucide Icons**: Beautiful icon set
 
-   ```env
-   PORT=3000
-   MONGO_URI=mongodb://localhost:27017/google-docs-clone
-   JWT_SECRET=your_jwt_secret
-   ```
+### Real-time Features
 
-4. **Run the Application**
+- **Liveblocks**: Real-time collaboration engine
+- **WebSocket**: Real-time communication
+- **Presence API**: User presence tracking
 
-   Start the development server:
+### Backend & Database
 
-   ```bash
-   npm run dev
-   ```
+- **Convex**: Backend framework with real-time capabilities
+- **API Routes**: Server-side functionality
 
-5. **Access the Application**
+### AI & Machine Learning
 
-   Navigate to `http://localhost:3000` in your browser.
+[visit](https://github.com/Anas-github-acc/texo-rag) the link for more details.
 
-## 🖥️ Usage
+### Authentication & Security
 
-1. **Sign Up/Login**: Create an account or log in.
-2. **Create a Document**: Use the "+ New Document" button to start.
-3. **Collaborate**: Share the document link with others for real-time editing.
-4. **Save Your Work**: Documents are auto-saved in the database.
+- **Clerk**: User authentication and management
+- **JWT**: Secure token-based auth
+- **Organization-based** access control
 
-## 🛠️ Development
+## 🚀 Getting Started
 
-### 📜 Commands
+### Prerequisites
 
-- **Start Development Server**: `npm run dev`
-- **Build for Production**: `npm run build`
-- **Linting**: `npm run lint`
+- Node.js (v16 or higher)
+- npm or pnpm
+- Liveblocks account
+- Google AI API key
+- Clerk account
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/AadiS27/Texo
+cd Texo
+```
+
+2. Install dependencies (use  --legacy-peer-deps if you encounter issues):
+
+```bash
+npm install
+```
+
+or use pnpm (recommended):
+
+```bash
+pnpm install
+```
+
+3. Create a .env.local file in the root directory:
+
+```env
+cp .env.template .env.local
+```
+
+4. Fill in the .env.local file:
+
+```env
+CONVEX_DEPLOYMENT=your_convex_deployment_id
+NEXT_PUBLIC_CONVEX_URL=your_convex_url
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+LIVEBLOCK_SPECIAL_KEY=your_liveblocks_special_key
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+4. Run the development server:
+
+```bash
+npm run dev
+```
+
+or with pnpm:
+
+```bash
+pnpm run dev
+```
+
+## 📦 Project Structure (Basic)
+
+```
+src/
+├── app/
+|   ├── api/            # API routes  
+│   ├── code/           # Code playground components
+│   └── documents/      # Document editor components
+├── components/         # Reusable components
+├── store/             # State management
+├── lib/               # Utility functions
+├── extensions/        # Tiptap extensions
+└── constants/         # Constants and types
+```
 
 ## 🤝 Contributing
 
-Contributions are welcome! To contribute:
+We welcome contributions! Please read our [contributing guidelines](CONTRIBUTING.md) before submitting pull requests.
 
-1. Fork the repository.
-2. Create a feature branch.
-3. Commit your changes.
-4. Push to the branch.
-5. Open a Pull Request.
+## 📄 License
+License :: OSI Approved :: GNU General Public License v3 (GPLv3)
 
-## 📜 License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgements
 
 - [Tiptap Editor](https://tiptap.dev/)
 - [Next.js](https://nextjs.org/)
-- [ShadCN UI](https://shadcn.dev/)
-- [Liveblocks.IO](https://liveblocks.io/)
+- [ShadcN UI](https://shadcn.dev/)
+- [Liveblocks](https://liveblocks.io/)
+- [Convex](https://www.convex.dev/)
+- [Google Gemini](https://ai.google.dev/)
