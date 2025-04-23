@@ -44,7 +44,7 @@ return(
     <DialogTrigger asChild>
     {children}
     </DialogTrigger>
-    <DialogContent onClick={(e)=>e.stopPropagation()}>
+    <DialogContent onClick={(e: React.MouseEvent<HTMLDivElement>)=>e.stopPropagation()}>
         <form onSubmit={onSubmit}>
         <DialogHeader>
             <DialogTitle>Rename document</DialogTitle>
@@ -53,23 +53,23 @@ return(
         <div className="my-4">
             <Input
             value={title}
-            onChange={(e)=>setTitle(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>)=>setTitle(e.target.value)}
             placeholder="Document Name"
-            onClick={(e)=>e.stopPropagation()}/>
+            onClick={(e: React.MouseEvent<HTMLInputElement>)=>e.stopPropagation()}/>
         </div>
         <DialogFooter>
             <Button
             type="button"
             variant='ghost'
             disabled={isUpdating}
-            onClick={(e)=>{
+            onClick={(e: React.MouseEvent<HTMLButtonElement>)=>{
                 e.stopPropagation();
                 setIsOpened(false);
             }}>Cancel</Button>
             <Button
             type="submit"
             disabled={isUpdating}
-            onClick={(e)=>{
+            onClick={(e: React.MouseEvent<HTMLButtonElement>)=>{
                 e.stopPropagation();
             }}>Save</Button>
         </DialogFooter>

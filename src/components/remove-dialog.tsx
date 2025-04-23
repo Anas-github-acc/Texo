@@ -34,30 +34,30 @@ return(
         <AlertDialogTrigger asChild>
         {children}
         </AlertDialogTrigger>
-        <AlertDialogContent onClick={(e)=>e.stopPropagation()}>
+        <AlertDialogContent onClick={(e: React.MouseEvent): void => e.stopPropagation()}>
         <AlertDialogHeader>
             <AlertDialogTitle>Are you sure?</AlertDialogTitle>
             <AlertDialogDescription>
-                This action cannot be undone.
+            This action cannot be undone.
             </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-        <AlertDialogCancel onClick={(e)=>e.stopPropagation()}>
+        <AlertDialogCancel onClick={(e: React.MouseEvent<HTMLButtonElement>): void => e.stopPropagation()}>
             Cancel
         </AlertDialogCancel>
         <AlertDialogAction
         disabled={isDeleting}
-        onClick={(e)=>{
+        onClick={(e: React.MouseEvent<HTMLButtonElement>): void => {
             e.stopPropagation();
             setIsDeleting(true);
-            remove({id:documentId})
-
-            .then(()=>{toast.success("Document deleted")
+            remove({id: documentId})
+            .then((): void => {
+            toast.success("Document deleted");
             router.push("/dashboard");
             })
-            .catch(()=>toast.error("Failed to delete document"))
-            .finally(()=>{
-                setIsDeleting(false);
+            .catch((): void => { toast.error("Failed to delete document"); })
+            .finally((): void => {
+            setIsDeleting(false);
             });
         }}>
             Delete
