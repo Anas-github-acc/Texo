@@ -1,4 +1,4 @@
-# 📄 Google Docs Clone with Tiptap Editor
+# 📄Texo - Google Docs Clone with Tiptap Editor
 
 A modern, feature-rich document editor built with Next.js and Tiptap, offering real-time collaboration and AI-powered assistance. This project combines powerful editing capabilities with seamless collaboration features.
 
@@ -168,6 +168,7 @@ src/
 We welcome contributions! Please read our [contributing guidelines](CONTRIBUTING.md) before submitting pull requests.
 
 ## 📄 License
+
 License :: OSI Approved :: GNU General Public License v3 (GPLv3)
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
