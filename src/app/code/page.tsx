@@ -35,8 +35,8 @@ export default function Playground() {
       } else {
         setOutput('Execution for this language is not supported.');
       }
-    } catch (error: any) {
-      setOutput(`Error: ${error.message}`);
+    } catch (error: unknown) {
+      setOutput(`Error: ${error instanceof Error ? error.message : String(error)}`);
     }
   };
 
