@@ -124,11 +124,11 @@ export const Header = () => {
     <div className="max-w-7xl relative mx-auto py-10 md:py-6 px-4 w-full text-left">
       <div className="bg-[#1f1f1f] rounded-md p-8 md:p-16 relative z-50 gap-5 flex flex-col items-center justify-center">
         <div className="flex flex-col text-2xl md:text-7xl font-bold text-[#f2f2f2] text-center gap-5">
-          <span className="text-blue-300 text-7xl">Better Document And Interpreter </span>
+          <span className="text-blue-300 text-7xl">Better Document And Code Editor </span>
           <span className="text-6xl text-[#f2f2f2]">Collaborate without chaos</span>
         </div>
         <p className="max-w-full text-[#f2f2f2]/90 md:text-xl mt-5 text-center ">
-          Collaborative, seamless conflict resolution, and multi-user workflows <br/> built for teams who can't afford to lose data
+          Collaborative, seamless conflict resolution, and multi-user workflows <br/> built for teams who can&apos;t afford to lose data
         </p>
         <div className="mt-8 items-center justify-center flex gap-3">
           <Button onClick={handleGetStarted} className="px-6 py-6  text-black/70 bg-[#f2f2f2] hover:bg-[#f2f2f2]/70 rounded-sm shadow-lg transition-all duration-300 font-bold cursor-pointer">
