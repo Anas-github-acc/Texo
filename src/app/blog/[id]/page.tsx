@@ -136,13 +136,14 @@ const getBlogPost = (id: string): BlogPost | null => {
 };
 
 interface BlogDetailPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function BlogDetailPage({ params }: BlogDetailPageProps) {
-  const blogPost = getBlogPost(params.id);
+export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
+  const resolvedParams = await params;
+  const blogPost = getBlogPost(resolvedParams.id);
 
   if (!blogPost) {
     notFound();
